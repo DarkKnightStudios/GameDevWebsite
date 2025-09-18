@@ -1,4 +1,4 @@
-/* Basic reset and styling */
+/* Reset and basic styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -11,4 +11,28 @@ header, footer {
   background: #1f1f1f;
   padding: 1rem;
   text-align: center;
+}
+
+.games-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.games {
+  display: flex;
+  flex-direction: column; /* stack vertically on small screens */
+  align-items: center;
+  gap: 1.5rem; /* space between games */
+}
+
+/* Make them side by side on wider screens */
+@media (min-width: 1200px) {
+  .games {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.games iframe {
+  border-radius: 10px;
 }
